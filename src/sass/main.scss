@@ -1,0 +1,298 @@
+:root {
+  --primary--button: #5C4E47;
+  --white--brown: #e8dcd6;
+  --secondary--button: #5C3C2B;
+  --text--color: #E1946A;
+  --white: #fff;
+  --third--color: #f8ccb3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main_container {
+  width: 100%;
+  position: relative;
+
+  .main {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-top: 6rem;
+    position: relative;
+
+    img {
+      width: 70%;
+      mask-image: linear-gradient(white 80%, transparent);
+      -webkit-mask-image: linear-gradient(to left, transparent, white 100%);
+    }
+
+    .text_container {
+      width: 40%;
+      font-size: 3rem;
+      color: var(--text--color);
+      padding: 1rem;
+      position: absolute;
+      top: 13rem;
+      right: 3rem;
+      text-align: center;
+
+      .diferent_color {
+        color: var(--primary--button);
+      }
+
+      .button_appointment {
+        width: 15rem;
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .info_appointment {
+    width: 85%;
+    height: auto;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white--brown);
+    border-radius: 0 3rem 0 0;
+
+    .text_container {
+      color: var(--primary--button);
+      font-size: 2rem;
+      width: 60%;
+
+      strong {
+        color: var(--text--color);
+      }
+    }
+
+    .button_n_animated {
+      width: 40%;
+      flex-direction: column;
+      @include flex-center;
+      gap: 2rem;
+    }
+    .button_appointment:hover {
+      background-color: var(--white);
+    }
+  }
+}
+
+.button_appointment {
+  width: auto;
+  padding: 1rem 2rem;
+  background-color: var(--primary--button);
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 3rem;
+  border: none;
+  box-shadow: 0px 2px 8px -6px #000;
+  cursor: pointer;
+  transition: 0.3s all;
+
+  &:hover {
+    transform: scale(1.05);
+    color: var(--primary--button);
+    background-color: var(--white--brown);
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+.angels_information {
+  width: 100%;
+  @include flex-center;
+  padding: 5rem;
+  gap: 5rem;
+  background: linear-gradient(to bottom, transparent, #b89a6e 100%);
+
+  img {
+    width: 35%;
+    box-shadow: 0px 2px 11px -4px #000;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(0.9)
+    }
+  }
+
+  .angels_text {
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+    width: 40%;
+
+    .question {
+      font-size: 2rem;
+      color: var(--text--color);
+      font-weight: 600;
+    }
+
+    .text {
+      color: var(--primary--button);
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* Animacion de texto */
+
+.text_animated {
+  margin: 0px;
+  text-align: center;
+  color: var(--text--color);
+  font-size: 2rem;
+  overflow: hidden;
+  animation: bg 5s linear infinite;
+}
+
+.dropping-texts {
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+  height: 36px;
+  vertical-align: -2px;
+}
+
+.dropping-texts>div {
+  font-size: 0px;
+  opacity: 0;
+  margin-left: -30px;
+  position: absolute;
+  font-weight: 600;
+  color: var(--primary--button);
+}
+
+.dropping-texts>div:nth-child(1) {
+  animation: roll 5s linear infinite 0s;
+}
+
+.dropping-texts>div:nth-child(2) {
+  animation: roll 5s linear infinite 1s;
+}
+
+.dropping-texts>div:nth-child(3) {
+  animation: roll 5s linear infinite 2s;
+}
+
+.dropping-texts>div:nth-child(4) {
+  animation: roll2 5s linear infinite 3s;
+}
+
+@keyframes roll {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(-25deg);
+  }
+
+  3% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  20% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+
+  27% {
+    font-size: 0px;
+    opacity: 0.5;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes roll2 {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(-25deg);
+  }
+
+  3% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  30% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+
+  37% {
+    font-size: 1500px;
+    opacity: 0;
+    margin-left: -1000px;
+    margin-top: -800px;
+  }
+
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(15deg);
+  }
+}

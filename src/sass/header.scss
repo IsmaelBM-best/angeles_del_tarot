@@ -1,0 +1,93 @@
+:root {
+    --primary--button: #5C4E47;
+    --white--brown: #e8dcd6;
+    --secondary--button: #5C3C2B;
+    --text--color: #E1946A;
+    --white: #fff;
+    --third--color: #f8ccb3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header_container {
+    width: 100%;
+    position: fixed;
+    @include flex-between;
+    padding: 1rem 2.5rem;
+    background-color: var(--white--brown);
+    box-shadow: 0px -1px 4px 0px #000;
+    border-radius: 0 0 2rem 2rem;
+    z-index: 99;
+    img {
+        width: 12rem;
+    }
+    .options_header {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        .option {
+            transition: 0.2s all;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            color: var(--primary--button);
+            &:hover {
+                transform: scale(1.2);
+                color: var(--text--color);
+            }
+        }
+    }
+    .options_button {
+        color: var(--primary--button);
+        background-color: var(--text--color);
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+        border: none;
+        font-size: 1.5rem;
+        transition: 0.3s all;
+        cursor: pointer;
+        @include flex-center;
+        &:hover {
+            transform: scale(1.2);
+        }
+        svg {
+            font-size: 1.6rem;
+            color: var(--white);
+            &:active {
+                animation: rotar 0.3s ease alternate;
+            }
+        }
+    }
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
