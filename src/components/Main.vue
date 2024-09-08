@@ -1,12 +1,49 @@
 <script>
 export default {
-    data(){
-        return {
+  data() {
+    return {
+      nombre: '', // Almacena el nombre del input
+      apellido: '', // Almacena el apellido del input
+      servicio: '', // Almacena el servicio seleccionado
+      droplist: false, // Controla la visualización del dropdown
+      error: '', // Almacena el mensaje de error
+    };
+  },
+  methods: {
+    // Alternar el dropdown del selector de servicios
+    drop_options() {
+      this.droplist = !this.droplist;
+    },
+    // Seleccionar un servicio y cerrar el dropdown
+    selectService(servicio) {
+      this.servicio = servicio;
+      this.droplist = false;
+    },
+    // Función para generar el mensaje y abrir WhatsApp
+    enviarMensaje() {
+      if (!this.nombre) {
+        this.error = 'Por favor ingrese su nombre.';
+      } else if (!this.apellido) {
+        this.error = 'Por favor ingrese su apellido.';
+      } else if (!this.servicio) {
+        this.error = 'Por favor seleccione un servicio.';
+      } else {
+        // Generar el mensaje con los datos del formulario
+        const mensaje = `Hola, soy ${this.nombre} ${this.apellido} y quiero mas informacion sobre ${this.servicio}.`;
+        const url = `https://wa.me/3015795111?text=${encodeURIComponent(mensaje)}`;
 
-        }
-    }
-}
+        // Redirigir a WhatsApp con el mensaje predefinido
+        window.open(url, '_blank');
+
+        // Limpiar el mensaje de error
+        this.error = '';
+      }
+    },
+  },
+};
 </script>
+
+
 
 <template>
     <div class="main_container">
@@ -39,9 +76,79 @@ export default {
                 <button class="button_appointment">Más información</button>
             </div>
         </div>
+
+        <!-- Formulario mensaje personalizado a whatsapp -->
+        <footer class="contact_footer">
+            <div class="form_information">
+                <h1 class="title_contact">¡Contáctanos en whatsapp!</h1>
+                <div class="form_angels">
+                <div class="form">
+                    <input
+                    type="text"
+                    v-model="nombre"
+                    id="nombre"
+                    class="form__input"
+                    autocomplete="off"
+                    placeholder=" "
+                    />
+                    <label for="nombre" class="form__label">Nombre</label>
+                </div>
+                <div class="form">
+                    <input
+                    type="text"
+                    v-model="apellido"
+                    id="apellido"
+                    class="form__input"
+                    autocomplete="off"
+                    placeholder=" "
+                    />
+                    <label for="apellido" class="form__label">Apellido</label>
+                </div>
+
+                <div class="services_selector">
+                    <div class="select_services" @click="drop_options">
+                        <div class="label">{{ servicio || 'Selecciona un servicio' }}</div>
+                        <font-awesome-icon :icon="['fas', 'caret-down']" />
+                    </div>
+                    <div class="options" v-if="droplist">
+                        <div class="option" @click="selectService('Amarres')">Amarres</div>
+                        <div class="option" @click="selectService('Endulzamientos')">Endulzamientos</div>
+                        <div class="option" @click="selectService('Artilugios de poder')">Artilugios de poder</div>
+                        <div class="option" @click="selectService('Limpias')">Limpias</div>
+                        <div class="option" @click="selectService('Lectura del tarot')">Lectura del tarot</div>
+                        <div class="option" @click="selectService('Lectura de angelologia')">Lectura de angelologia</div>
+                    </div>
+                </div>
+
+                <p v-if="error" class="error_message">{{ error }}</p>
+
+                <button class="button_appointment" @click="enviarMensaje">Enviar mensaje</button>
+                </div>
+            </div>
+            <img src="../image/form_image.jpg" alt="" />
+        </footer>
+
+        <!-- Contacto directo a whatsapp -->
+        <div>
+            <a
+                href="https://wa.me/3015795111?text=Hola%20estoy%20interesado%20en%20agendar%20una%20lectura."
+                target="_blank"
+                class="whatsapp_contact"
+            >
+                <font-awesome-icon :icon="['fab', 'whatsapp']" />
+            </a>
+        </div>
+
     </div>
 </template>
 
 <style>
 @import  "../sass/main.scss";
+
+.error_message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+}
 </style>

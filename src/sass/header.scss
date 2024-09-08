@@ -91,3 +91,35 @@
     }
 }
 
+/* contenedor depliegue de opciones en agendamiento */
+
+.options_deploy {
+    position: fixed;
+    width: 11rem;
+    background-color: var(--text--color);
+    left: 25rem;
+    top: 6.7rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    animation: deploy 0.3s alternate;
+    .option {
+        color: var(--white);
+        padding: 1rem;
+        cursor: pointer;
+        transition: 0.3s all;
+        &:hover {
+            background-color: #5C4E47;
+        }
+    }
+}
+
+@keyframes deploy {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
