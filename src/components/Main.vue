@@ -7,6 +7,7 @@ export default {
       servicio: '', // Almacena el servicio seleccionado
       droplist: false, // Controla la visualización del dropdown
       error: '', // Almacena el mensaje de error
+      show_component: false
     };
   },
   methods: {
@@ -39,19 +40,22 @@ export default {
         this.error = '';
       }
     },
+    changeRoute(){
+      this.show_component = !this.show_component
+    }
   },
 };
 </script>
 
-
-
 <template>
-    <div class="main_container">
-        <div class="main">
+    <div class="main_container" v-if="!show_component">
+        <div class="main" id="main">
             <img src="../image/woman_lifestyle.jpg" alt="Meditación">
             <div class="text_container">
-                <strong class="diferent_color">Descubre</strong> la guía angelical que te <strong class="diferent_color">acompaña.</strong> <br>
-                <button class="button_appointment">Ver guía</button>
+              <strong class="diferent_color">Descubre</strong> la guía angelical que te <strong class="diferent_color">acompaña.</strong> <br>
+              <a href="https://wa.me/3015795111?text=Me%20gustaria%20obtener%20la%20guia%20angelical" class="button_appointment" target="_blank">
+                Ver guía
+              </a>
             </div>
         </div>
         <div class="info_appointment">
@@ -65,7 +69,9 @@ export default {
                         <div class="changing">ángeles</div>
                     </div>
                 </div>
-                <button class="button_appointment">Reserva online</button>
+                <a href="https://wa.me/3015795111?text=Me%20gustaria%20reservar%20una%20sesion." class="button_appointment" target="_blank">
+                  Reserva online
+                </a>
             </div>
         </div>
         <div class="angels_information">
@@ -73,12 +79,23 @@ export default {
             <div class="angels_text">
                 <div class="question">¿Qué es la lectura del tarot por medio de la angelología?</div>
                 <div class="text">La lectura del tarot por medio de la angelología es una forma de lectura del tarot que se enfoca en la conexión con los ángeles y la guía angelical. Se utiliza el tarot como herramienta para recibir mensajes y orientación de los ángeles, y para conectarse con la energía de los ángeles.</div>
-                <button class="button_appointment">Más información</button>
+                <a href="https://wa.me/3015795111?text=Quisiera%20mas%20informacion%20sobre%20la%20lectura%20del%20tarot%20por%20medio%20de%20la%20angelología" class="button_appointment" target="_blank">
+                  Mas informacion
+                </a>
             </div>
         </div>
 
+        <!-- Testimonios -->
+         <div class="testimonies_container" id="testimony">
+          <img src="/src/image/good_life_image.jpg" alt="">
+          <div class="members_number">
+            <div class="afirmation">¡Ya somos mas de 3200 almas!</div>
+            <div class="question">¿que esperas para unirte a nuestra familia?</div>
+          </div>
+        </div>
+
         <!-- Formulario mensaje personalizado a whatsapp -->
-        <footer class="contact_footer">
+        <footer class="contact_footer" id="about_us">
             <div class="form_information">
                 <h1 class="title_contact">¡Contáctanos en whatsapp!</h1>
                 <div class="form_angels">
@@ -138,8 +155,20 @@ export default {
                 <font-awesome-icon :icon="['fab', 'whatsapp']" />
             </a>
         </div>
+      </div>
 
-    </div>
+      <!-- red social (tik tok) -->
+       <div class="tik_tok">
+        <div class="text_and_icon">
+          ¡Encuentranos en nuestra red social estrella!
+          <a class="tik_tok_container"href="https://www.tiktok.com/@angelesdeltarot?_t=8prD3jnTDGf&_r=1" target="_blank">
+            <font-awesome-icon :icon="['fab', 'tiktok']" />
+          </a>
+        </div>
+        <div class="footer">
+          Todos los derechos reservados Angeles del tarot.
+        </div>
+       </div>
 </template>
 
 <style>

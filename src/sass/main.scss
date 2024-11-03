@@ -57,21 +57,23 @@
 
     .text_container {
       width: 40%;
-      font-size: 3rem;
+      font-size: 3vw;
       color: var(--text--color);
       padding: 1rem;
       position: absolute;
       top: 13rem;
       right: 3rem;
       text-align: center;
-
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .diferent_color {
         color: var(--primary--button);
       }
 
       .button_appointment {
-        width: 15rem;
-        margin-top: 3rem;
+        width: 22vw;
+        text-decoration: none;
       }
     }
   }
@@ -88,7 +90,7 @@
 
     .text_container {
       color: var(--primary--button);
-      font-size: 2rem;
+      font-size: 2.2vw;
       width: 60%;
 
       strong {
@@ -109,18 +111,23 @@
 }
 
 .button_appointment {
-  width: auto;
+  width: 20vw;
+  text-decoration: none;
   padding: 1rem 2rem;
   background-color: var(--primary--button);
   color: var(--white);
-  font-size: 1.3rem;
+  font-size: 1.4vw;
   font-weight: 600;
   border-radius: 3rem;
   border: none;
   box-shadow: 0px 2px 8px -6px #000;
   cursor: pointer;
   transition: 0.3s all;
-
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: var(--white);
+  }
   &:hover {
     transform: scale(1.05);
     color: var(--primary--button);
@@ -157,14 +164,14 @@
     width: 40%;
 
     .question {
-      font-size: 2rem;
+      font-size: 2vw;
       color: var(--text--color);
       font-weight: 600;
     }
 
     .text {
       color: var(--primary--button);
-      font-size: 1.5rem;
+      font-size: 1.5vw;
     }
   }
 }
@@ -175,9 +182,11 @@
   margin: 0px;
   text-align: center;
   color: var(--text--color);
-  font-size: 2rem;
+  font-size: 2vw;
   overflow: hidden;
   animation: bg 5s linear infinite;
+  display: flex;
+  gap: 1rem;
 }
 
 .dropping-texts {
@@ -334,7 +343,7 @@
 
 .contact_footer {
   width: 100%;
-  @include flex-start;
+  @include flex-center;
   padding: 5rem;
   gap: 5rem;
   background: linear-gradient(to top, transparent, #b89a6e 100%);
@@ -382,6 +391,7 @@
 .services_selector {
   width: 100%;
   position: relative;
+  z-index: 99;
   .select_services {
     width: 100%;
     height: auto;
@@ -484,3 +494,156 @@ reduce the size of the label and move upwards
   left: 0.8rem;
 }
 
+/* estilos apartado testimonios */
+
+.testimonies_container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: -0.3rem;
+  display: flex;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+  .members_number {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: var(--third--color);
+    border-radius: 2.5rem 0 0 2.5rem;
+    padding-right: 2rem;
+    font-size: 2.5vw;
+    color: var(--primary--button);
+    .afirmation {
+      color: var(--text--color);
+    }
+    .question {
+      color: var(--secondary--button);
+    }
+  }
+}
+
+.tik_tok {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem;
+  @include flex-center;
+  font-size: 1.5vw;
+  background-color: var(--secondary--button);
+  color: var(--white);
+  .text_and_icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .tik_tok_container {
+      width: auto;
+      height: auto;
+      padding: 1rem;
+      border-radius: 1rem;
+      background-color: transparent;
+      &:hover {
+        background-color: #e8dcd6;
+        color: #000;
+      }
+      svg {
+        font-size: 3rem;
+        color: #fff;
+        transition: 0.3s all;
+        &:hover {
+          color: #000;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main_container .main img {
+    display: none;
+  }
+
+  .main_container .main .text_container {
+    width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    padding-top: 2rem;
+  }
+
+  .main_container .info_appointment .text_container {
+    width: 100%;
+    font-size: 3vw;
+  }
+
+  .info_appointment {
+    gap: 2rem;
+    flex-direction: column;
+    padding: 2rem;
+
+  }
+
+  .main_container .info_appointment .button_n_animated {
+    width: 100%;
+  }
+
+  .info_appointment .button_n_animated .text_animated {
+    justify-content: center;
+    width: 100%;
+    font-size: 3vw;
+  }
+
+  .angels_information {
+    flex-direction: column;
+  }
+
+  .contact_footer {
+    flex-direction: column;
+    padding: 2rem;
+    .form_information {
+      width: 100%;
+    }
+    img {
+      width: 55%;
+    }
+  }
+
+  .button_appointment {
+    font-size: 2vw;
+    padding: 0.8rem 2rem;
+    width: 25vw;
+  }
+
+  .angels_information img {
+    width: 55%;
+  }
+
+  .angels_information .angels_text {
+    width: 80%;
+    .question {
+      font-size: 3vw;
+    }
+    .text {
+      font-size: 2.5vw;
+    }
+  }
+
+  .testimonies_container .members_number {
+    height: 12rem;
+    width: 80%;
+    font-size: 3vw;
+  }
+
+  .main_container .info_appointment {
+    width: 95%;
+    padding: 2rem;
+  }
+}
