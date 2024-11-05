@@ -50,7 +50,7 @@ export default {
 <template>
     <div class="main_container" v-if="!show_component">
         <div class="main" id="main">
-            <img src="../image/woman_lifestyle.jpg" alt="Meditación">
+            <img src="../image/angeles_6.jpeg" alt="Meditación">
             <div class="text_container">
               <strong class="diferent_color">Descubre</strong> la guía angelical que te <strong class="diferent_color">acompaña.</strong> <br>
               <a href="https://wa.me/3015795111?text=Me%20gustaria%20obtener%20la%20guia%20angelical" class="button_appointment" target="_blank">
@@ -75,7 +75,7 @@ export default {
             </div>
         </div>
         <div class="angels_information">
-            <img src="../image/tarot.jpeg" alt="">
+            <img src="../image/angeles_3.jpeg" alt="">
             <div class="angels_text">
                 <div class="question">¿Qué es la lectura del tarot por medio de la angelología?</div>
                 <div class="text">La lectura del tarot por medio de la angelología es una forma de lectura del tarot que se enfoca en la conexión con los ángeles y la guía angelical. Se utiliza el tarot como herramienta para recibir mensajes y orientación de los ángeles, y para conectarse con la energía de los ángeles.</div>
@@ -87,7 +87,7 @@ export default {
 
         <!-- Testimonios -->
          <div class="testimonies_container" id="testimony">
-          <img src="/src/image/good_life_image.jpg" alt="">
+          <img src="/src/image/angeles_7.jpeg" alt="">
           <div class="members_number">
             <div class="afirmation">¡Ya somos mas de 3200 almas!</div>
             <div class="question">¿que esperas para unirte a nuestra familia?</div>
@@ -142,7 +142,7 @@ export default {
                 <button class="button_appointment" @click="enviarMensaje">Enviar mensaje</button>
                 </div>
             </div>
-            <img src="../image/form_image.jpg" alt="" />
+            <img src="../image/angeles_4.jpeg" alt="" />
         </footer>
 
         <!-- Contacto directo a whatsapp -->

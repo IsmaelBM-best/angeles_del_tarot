@@ -567,16 +567,14 @@ reduce the size of the label and move upwards
 }
 
 @media (max-width: 900px) {
-  .main_container .main img {
-    display: none;
-  }
 
   .main_container .main .text_container {
     width: 100%;
-    position: relative;
+    height: 100%;
     top: 0;
     right: 0;
     padding-top: 2rem;
+    justify-content: center;
   }
 
   .main_container .info_appointment .text_container {
@@ -645,5 +643,9 @@ reduce the size of the label and move upwards
   .main_container .info_appointment {
     width: 95%;
     padding: 2rem;
+  }
+
+  .main_container .main {
+    padding-top: 4rem;
   }
 }
