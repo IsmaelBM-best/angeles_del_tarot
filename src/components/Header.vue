@@ -11,7 +11,7 @@ export default {
     },
     redirectToWhatsApp(service) {
       const message = `Hola, estoy interesado en el servicio de ${service}. ¿Podrían darme más información?`
-      const url = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`
+      const url = `https://wa.me/3015795111?text=${encodeURIComponent(message)}`
       window.open(url, '_blank')
     }
   }
