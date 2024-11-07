@@ -48,34 +48,40 @@
     height: auto;
     padding-top: 6rem;
     position: relative;
-
+    align-items: center;
     img {
-      width: 70%;
-      mask-image: linear-gradient(white 80%, transparent);
-      -webkit-mask-image: linear-gradient(to left, transparent, white 100%);
+      width: 100%;
     }
 
     .text_container {
-      width: 40%;
-      font-size: 3vw;
+      width: 45%;
+      font-size: 1.5vw;
       color: var(--text--color);
-      padding: 1rem;
+      padding: 2rem;
       position: absolute;
-      top: 13rem;
-      right: 3rem;
+      right: 0;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      .diferent_color {
-        color: var(--primary--button);
-      }
-
+      background-color: var(--secondary--button);
+      gap: 2rem;
+      border-radius: 2rem 0 0 2rem; 
       .button_appointment {
-        width: 22vw;
         text-decoration: none;
       }
     }
+  }
+
+  .title {
+    color: var(--text--color);
+    text-align: center;
+    width: 100%;
+  }
+  .text {
+    color: var(--white);
+    text-align: center;
+    width: 100%;
   }
 
   .info_appointment {
@@ -111,7 +117,7 @@
 }
 
 .button_appointment {
-  width: 20vw;
+  width: auto;
   text-decoration: none;
   padding: 1rem 2rem;
   background-color: var(--primary--button);
@@ -124,6 +130,8 @@
   cursor: pointer;
   transition: 0.3s all;
   text-align: center;
+  @include flex-center;
+  gap: 1rem;
   a {
     text-decoration: none;
     color: var(--white);
@@ -144,13 +152,13 @@
   @include flex-center;
   padding: 5rem;
   gap: 5rem;
-  background: linear-gradient(to bottom, transparent, #b89a6e 100%);
+  background: #b89a6e85;
 
   img {
     width: 35%;
     box-shadow: 0px 2px 11px -4px #000;
     transition: 0.3s all;
-
+    animation: heart 2s ease alternate infinite;
     &:hover {
       transform: scale(0.9)
     }
@@ -348,7 +356,9 @@
   gap: 5rem;
   background: linear-gradient(to top, transparent, #b89a6e 100%);
   h1 {
-    color: var(--white);
+    color: var(--secondary--button);
+    text-align: center;
+    font-size: 2.2vw;
   }
   .form_information {
     display: flex;
@@ -508,25 +518,27 @@ reduce the size of the label and move upwards
   }
   .members_number {
     position: absolute;
-    right: 0;
+    left: 0;
     width: 60%;
-    height: 15rem;
+    height: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: center;
     background-color: var(--third--color);
-    border-radius: 2.5rem 0 0 2.5rem;
-    padding-right: 2rem;
-    font-size: 2.5vw;
+    border-radius: 0 2.5rem 2.5rem 0;
+    padding: 1.5rem;
+    font-size: 1.5vw;
     color: var(--primary--button);
-    .afirmation {
-      color: var(--text--color);
-    }
-    .question {
+    gap: 1.5rem;
+    align-items: center;
+    .text {
       color: var(--secondary--button);
     }
   }
+}
+
+.section {
+  padding-top: 0 !important;
 }
 
 .tik_tok {
@@ -536,7 +548,7 @@ reduce the size of the label and move upwards
   width: 100%;
   padding: 2rem;
   @include flex-center;
-  font-size: 1.5vw;
+  font-size: 1.2rem;
   background-color: var(--secondary--button);
   color: var(--white);
   .text_and_icon {
@@ -545,36 +557,46 @@ reduce the size of the label and move upwards
     gap: 1rem;
     .tik_tok_container {
       width: auto;
-      height: auto;
-      padding: 1rem;
       border-radius: 1rem;
       background-color: transparent;
-      &:hover {
-        background-color: #e8dcd6;
-        color: #000;
-      }
       svg {
         font-size: 3rem;
         color: #fff;
-        transition: 0.3s all;
-        &:hover {
+        transition: 0.1s all;
+        &:active {
           color: #000;
-          transform: scale(1.2);
         }
       }
     }
   }
 }
 
-@media (max-width: 900px) {
+.testimonios {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #5C3C2B;
+  overflow-x: auto;
+  padding: 2rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  img {
+    width: 20rem;
+  }
+}
 
+@media (max-width: 900px) {
   .main_container .main .text_container {
-    width: 100%;
-    height: 100%;
-    top: 0;
+    width: 70%;
+    height: auto;
     right: 0;
-    padding-top: 2rem;
     justify-content: center;
+    font-size: 2.5vw;
+    border-radius: 1rem 0 0 1rem;
+    gap: 1.5rem;
+    padding: 2rem;
   }
 
   .main_container .info_appointment .text_container {
@@ -612,20 +634,27 @@ reduce the size of the label and move upwards
     img {
       width: 55%;
     }
+    h1 {
+      font-size: 3.2vw;
+    }
   }
 
   .button_appointment {
-    font-size: 2vw;
+    font-size: 2.5vw;
     padding: 0.8rem 2rem;
-    width: 25vw;
+  }
+
+  .angels_information {
+    padding: 3rem;
+    gap: 3rem;
   }
 
   .angels_information img {
-    width: 55%;
+    width: 70%;
   }
 
   .angels_information .angels_text {
-    width: 80%;
+    width: 100%;
     .question {
       font-size: 3vw;
     }
@@ -635,9 +664,10 @@ reduce the size of the label and move upwards
   }
 
   .testimonies_container .members_number {
-    height: 12rem;
     width: 80%;
-    font-size: 3vw;
+    font-size: 2.5vw;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   .main_container .info_appointment {
@@ -647,5 +677,9 @@ reduce the size of the label and move upwards
 
   .main_container .main {
     padding-top: 4rem;
+  }
+
+  .testimonios {
+    justify-content: flex-start;
   }
 }

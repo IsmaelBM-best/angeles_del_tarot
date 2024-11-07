@@ -20,8 +20,9 @@ export default {
       </a>
       <div class="options_header">
           <div class="option" @click="deployOptions">Agendamiento</div>
-          <a class="option" href="#testimony">Comunidad</a>
+          <a class="option" href="#comunity">Comunidad</a>
           <a class="option"  href="#contact_us">Contáctanos</a>
+          <a class="option"  href="#testimony">Testimonios</a>
       </div>
       <button class="options_button" @click="deployOptions">
           <font-awesome-icon :icon="['fas', 'bars']" />
