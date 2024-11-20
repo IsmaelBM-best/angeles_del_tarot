@@ -56,22 +56,24 @@ export default {
               <div class="text">Te brindamos la ayuda que tanto estabas buscando. en este espacio, encontraras guías y apoyo espiritual para solucionar los desafíos y recibir las bendiciones del amor, a través de nuestro conocimiento podrás restaurar tu relación.</div>
               <a href="https://wa.me/3015795111" class="button_appointment" target="_blank">
                 <font-awesome-icon :icon="['fab', 'whatsapp']" />
-                Amarre de amor
+                Contactanos...
               </a>
               <div class="text">Atrévete a recuperar tu felicidad y estabilidad emocional.</div>
             </div>
         </div>
 
-        <div class="angels_information">
-            <img src="../image/angeles_2.jpeg" alt="">
-            <div class="angels_text">
-                <div class="question">Rituales de magia blanca para enamorar <br>¿quieres saber como puedo ayudarte a recuperar el amor?<br>¿que técnicas podemos utilizar para atraer a tu ser amado?</div>
-                <div class="text">Nuestro ritual de amor es una ceremonia sagrada diseñada para atraer a tu alama gemela, fortalecer la conexion emocional con tu pareja, eliminar los obstáculos y patrones negativos que impíden que tu ser amado este contigo. confía en la ayuda de los ángeles para encontrar la felicidad que mereces.</div>
-                <a href="https://wa.me/3015795111" class="button_appointment" target="_blank">
-                  <font-awesome-icon :icon="['fab', 'whatsapp']" />
-                  Reconquistar a mi ex
-                </a>
-                <div class="text">No dejes pasar esta oportunidad para recibir la ayuda profesional a través de los ángeles.</div>
+        <div class="angels_information image_two">
+            <div class="blur_angels_info">
+              <img src="../image/angeles_2.jpeg" alt="">
+              <div class="angels_text">
+                  <div class="question">Rituales de magia blanca para enamorar <br>¿quieres saber como puedo ayudarte a recuperar el amor?<br>¿que técnicas podemos utilizar para atraer a tu ser amado?</div>
+                  <div class="text">Nuestro ritual de amor es una ceremonia sagrada diseñada para atraer a tu alama gemela, fortalecer la conexion emocional con tu pareja, eliminar los obstáculos y patrones negativos que impíden que tu ser amado este contigo. confía en la ayuda de los ángeles para encontrar la felicidad que mereces.</div>
+                  <a href="https://wa.me/3015795111" class="button_appointment" target="_blank">
+                    <font-awesome-icon :icon="['fab', 'whatsapp']" />
+                    Amarre de amor
+                  </a>
+                  <div class="text">No dejes pasar esta oportunidad para recibir la ayuda profesional a través de los ángeles.</div>
+              </div>
             </div>
         </div>
 
@@ -85,13 +87,14 @@ export default {
             </div>
               <a href="https://wa.me/3015795111" target="_blank" class="button_appointment">
                 <font-awesome-icon :icon="['fab', 'whatsapp']" />
-                Contactar al maestro
+                Descubre tu futuro
               </a>
               <div class="text">Descubre tu destino en el amor con nuestra lectura del tarot.</div>
           </div>
         </div>
 
-        <div class="angels_information">
+        <div class="angels_information image_four">
+          <div class="blur_angels_info">
             <img src="../image/angeles_4.jpeg" alt="">
             <div class="angels_text">
                 <div class="question">Limpiezas espirituales</div>
@@ -102,10 +105,11 @@ export default {
                 </div>
                 <a href="https://wa.me/3015795111" class="button_appointment" target="_blank">
                   <font-awesome-icon :icon="['fab', 'whatsapp']" />
-                  Agendar limpieza
+                  Abre tu camino
                 </a>
                 <div class="text">No pierdas esta oportunidad de restaurar tu equilibrio y armonía.</div>
             </div>
+          </div>
         </div>
 
         <div class="main section" id="main">
@@ -120,7 +124,7 @@ export default {
               </div>
               <a href="https://wa.me/3015795111" class="button_appointment" target="_blank">
                 <font-awesome-icon :icon="['fab', 'whatsapp']" />
-                Volverme rico
+                Obten el exito
               </a>
               <div class="text">
                 No pierdas esta oportunidad de solucionar tus conflictos financieros, actúa ahora y obtén la riqueza.
@@ -128,7 +132,8 @@ export default {
             </div>
         </div>
 
-        <div class="angels_information">
+        <div class="angels_information image_six">
+          <div class="blur_angels_info image_six">
             <div class="angels_text">
                 <div class="question">Artilugios de poder</div>
                 <div class="text">
@@ -139,7 +144,7 @@ export default {
                 </div>
                 <a href="https://wa.me/3015795111" class="button_appointment" target="_blank">
                   <font-awesome-icon :icon="['fab', 'whatsapp']" />
-                  Comprar amuleto
+                  ¡Compralo ahora!
                 </a>
                 <div class="text">
                   Obtén ya amuletos de amor para atraer tu alma gemela, talismanes de prosperidad, cristales de protección y velas mágicas para manifestar tus deseos.
@@ -148,14 +153,15 @@ export default {
             </div>
             <img src="../image/angeles_6.jpeg" alt="">
           </div>
+          </div>
 
           <div class="testimonies_container" id="comunity">
           <img src="/src/image/angeles_7.jpeg" alt="">
           <div class="members_number">
             <div class="title">Mas de 3700 familias restauradas</div>
             <div class="text">
-              somos un grupo de ángeologos con 25 años de experiencia que a través del don y el poder de comunicarnos con Dios y sus arcángeles te ayudamos a solucionar
-              cualquier tipo de problema o situación en el área del amor, salud o prosperidad, TODOS NUESTROS TRABAJOS Y PROCSESOS SON TOTALMENTE GARANTIZADOS
+              Somos un grupo de ángeologos con 25 años de experiencia que a través del don y el poder de comunicarnos con Dios y sus arcángeles te ayudamos a solucionar
+              cualquier tipo de problema o situación en el área del amor, salud o prosperidad, TODOS NUESTROS TRABAJOS Y PROCESOS SON TOTALMENTE GARANTIZADOS
             </div>
           </div>
         </div>
@@ -199,7 +205,7 @@ export default {
                         <div class="option" @click="selectService('Artilugios de poder')">Artilugios de poder</div>
                         <div class="option" @click="selectService('Limpias')">Limpias</div>
                         <div class="option" @click="selectService('Lectura del tarot')">Lectura del tarot</div>
-                        <div class="option" @click="selectService('Lectura de angelologia')">Lectura de angelologia</div>
+                        <div class="option" @click="selectService('Abre caminos')">Abre caminos</div>
                     </div>
                 </div>
 
@@ -241,7 +247,13 @@ export default {
         <div class="footer">
           Todos los derechos reservados Angeles del tarot.
         </div>
-       </div>
+        <div class="footer">
+          *Acceso restringido a menores de 18 años, segun la legislacion vigente*
+        </div>
+        <div class="footer">
+          No se asegura un resultado especifico y estos pueden varias según el caso
+        </div>
+      </div>
 </template>
 
 <style>

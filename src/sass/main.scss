@@ -12,6 +12,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
 }
 
 @mixin flex-center {
@@ -46,7 +47,6 @@
     display: flex;
     width: 100%;
     height: auto;
-    padding-top: 6rem;
     position: relative;
     align-items: center;
     img {
@@ -54,19 +54,19 @@
     }
 
     .text_container {
-      width: 45%;
-      font-size: 1.5vw;
+      width: 100%;
+      height: 100%;
+      font-size: 3vw;
       color: var(--text--color);
       padding: 2rem;
       position: absolute;
-      right: 0;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: var(--secondary--button);
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.525);
       gap: 2rem;
-      border-radius: 2rem 0 0 2rem; 
       .button_appointment {
         text-decoration: none;
       }
@@ -74,9 +74,10 @@
   }
 
   .title {
-    color: var(--text--color);
+    color: #f8ccb3;
     text-align: center;
     width: 100%;
+    font-size: 3.5vw;
   }
   .text {
     color: var(--white);
@@ -120,9 +121,9 @@
   width: auto;
   text-decoration: none;
   padding: 1rem 2rem;
-  background-color: var(--primary--button);
+  background-color: #00bc35;
   color: var(--white);
-  font-size: 1.4vw;
+  font-size: 2.4vw;
   font-weight: 600;
   border-radius: 3rem;
   border: none;
@@ -145,17 +146,19 @@
   &:active {
     transform: scale(0.8);
   }
-}
+} 
 
 .angels_information {
   width: 100%;
-  @include flex-center;
-  padding: 5rem;
-  gap: 5rem;
-  background: #b89a6e85;
+  .blur_angels_info {
+    @include flex-center;
+    padding: 5rem;
+    gap: 5rem;
+    background: #b89a6e85;
+  }
 
   img {
-    width: 35%;
+    width: 40%;
     box-shadow: 0px 2px 11px -4px #000;
     transition: 0.3s all;
     animation: heart 2s ease alternate infinite;
@@ -169,19 +172,32 @@
     flex-direction: column;
     text-align: center;
     gap: 1.2rem;
-    width: 40%;
+    width: 60%;
 
     .question {
-      font-size: 2vw;
-      color: var(--text--color);
+      font-size: 3vw;
+      color: #3c1212;
       font-weight: 600;
     }
 
     .text {
-      color: var(--primary--button);
-      font-size: 1.5vw;
+      color: var(--white);
+      font-size: 2.5vw;
     }
   }
+}
+
+
+/* imagenes de fondo segunda propuesta de imagen */
+.image_two {
+  background-image: url(../image/angeles_2.jpeg);
+}
+.image_four {
+  background-image: url(../image/angeles_4.jpeg);
+}
+.image_six {
+  background-image: url(../image/angeles_6.jpeg);
+  background-color: #ffd79ad7;
 }
 
 /* Animacion de texto */
@@ -322,7 +338,7 @@
 
 .whatsapp_contact {
   position: fixed;
-  background: var(--primary--button);
+  background: #00bc35;
   bottom: 1rem;
   right: 1rem;
   width: 4rem;
@@ -343,9 +359,6 @@
     width: 2.5rem;
     height: 2.5rem;
     color: var(--white);
-    &:hover {
-      color: var(--text--color);
-    }
   }
 }
 
@@ -518,27 +531,24 @@ reduce the size of the label and move upwards
   }
   .members_number {
     position: absolute;
-    left: 0;
-    width: 60%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--third--color);
-    border-radius: 0 2.5rem 2.5rem 0;
+    background-color: #f8ccb3ba;
     padding: 1.5rem;
-    font-size: 1.5vw;
+    font-size: 2.8vw;
     color: var(--primary--button);
     gap: 1.5rem;
     align-items: center;
     .text {
       color: var(--secondary--button);
     }
+    .title {
+      color: #3c1212;
+    }
   }
-}
-
-.section {
-  padding-top: 0 !important;
 }
 
 .tik_tok {
@@ -588,98 +598,10 @@ reduce the size of the label and move upwards
 }
 
 @media (max-width: 900px) {
-  .main_container .main .text_container {
-    width: 70%;
-    height: auto;
-    right: 0;
-    justify-content: center;
-    font-size: 2.5vw;
-    border-radius: 1rem 0 0 1rem;
-    gap: 1.5rem;
-    padding: 2rem;
-  }
-
-  .main_container .info_appointment .text_container {
-    width: 100%;
-    font-size: 3vw;
-  }
-
-  .info_appointment {
-    gap: 2rem;
-    flex-direction: column;
-    padding: 2rem;
-
-  }
-
-  .main_container .info_appointment .button_n_animated {
-    width: 100%;
-  }
-
-  .info_appointment .button_n_animated .text_animated {
-    justify-content: center;
-    width: 100%;
-    font-size: 3vw;
-  }
-
-  .angels_information {
+  .blur_angels_info {
     flex-direction: column;
   }
-
   .contact_footer {
     flex-direction: column;
-    padding: 2rem;
-    .form_information {
-      width: 100%;
-    }
-    img {
-      width: 55%;
-    }
-    h1 {
-      font-size: 3.2vw;
-    }
-  }
-
-  .button_appointment {
-    font-size: 2.5vw;
-    padding: 0.8rem 2rem;
-  }
-
-  .angels_information {
-    padding: 3rem;
-    gap: 3rem;
-  }
-
-  .angels_information img {
-    width: 70%;
-  }
-
-  .angels_information .angels_text {
-    width: 100%;
-    .question {
-      font-size: 3vw;
-    }
-    .text {
-      font-size: 2.5vw;
-    }
-  }
-
-  .testimonies_container .members_number {
-    width: 80%;
-    font-size: 2.5vw;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .main_container .info_appointment {
-    width: 95%;
-    padding: 2rem;
-  }
-
-  .main_container .main {
-    padding-top: 4rem;
-  }
-
-  .testimonios {
-    justify-content: flex-start;
   }
 }

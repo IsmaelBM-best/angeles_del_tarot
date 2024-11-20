@@ -38,7 +38,7 @@ export default {
       <div class="option" @click="redirectToWhatsApp('Artilugios de poder')">Artilugios de poder</div>
       <div class="option" @click="redirectToWhatsApp('Limpias')">Limpias</div>
       <div class="option" @click="redirectToWhatsApp('Lectura del tarot')">Lectura del tarot</div>
-      <div class="option" @click="redirectToWhatsApp('Lectura de angelologia')">Lectura de angelología</div>
+      <div class="option" @click="redirectToWhatsApp('Abre caminos')">Abre caminos</div>
     </div>
   </div>
 </template>
