@@ -51,7 +51,7 @@ export default {
     <div class="main_container" v-if="!show_component">
         <div class="main" id="main">
             <img src="../image/angeles_1.jpeg" alt="Meditación">
-            <div class="text_container">
+            <div class="text_container first_main">
               <div class="title">Maestros especialistas en el amor</div>
               <div class="text">Te brindamos la ayuda que tanto estabas buscando. en este espacio, encontraras guías y apoyo espiritual para solucionar los desafíos y recibir las bendiciones del amor, a través de nuestro conocimiento podrás restaurar tu relación.</div>
               <a href="https://wa.me/3015795111" class="button_appointment" target="_blank">

@@ -585,7 +585,7 @@ reduce the size of the label and move upwards
   display: flex;
   gap: 2rem;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #5C3C2B;
   overflow-x: auto;
   padding: 2rem;
@@ -603,5 +603,80 @@ reduce the size of the label and move upwards
   }
   .contact_footer {
     flex-direction: column;
+    h1 {
+      font-size: 3.2vw;
+    }
   }
+}
+
+@media (max-width: 600px) {
+  .main_container .main .text_container {
+    gap: 0.5rem;
+    font-size: 4.3vw;
+    padding: 1rem;
+    .title {
+      font-size: 5.2vw;
+    }
+  }
+
+  .main_container .main .first_main {
+    justify-content: flex-end;
+  }
+
+  .button_appointment {
+    font-size: 3.5vw;
+    padding: 0.5rem 2rem;
+    text-wrap-mode: nowrap;
+  }
+
+  .angels_information .blur_angels_info {
+    padding: 2rem;
+    gap: 2rem;
+    .angels_text {
+      width: 100%;
+    }
+  }
+
+  .angels_information .angels_text .question {
+    font-size: 4.5vw;
+  }
+
+  .angels_information .angels_text .text {
+    font-size: 4vw;
+  }
+
+  .angels_information img {
+    width: 65%;
+  }
+
+  .testimonies_container .members_number {
+    font-size: 3.5vw;
+    gap: 0.5rem;
+    padding: 1rem;
+    .title {
+      font-size: 4.5vw;
+    }
+  }
+
+  .contact_footer {
+    padding: 1.5rem;
+    h1 {
+      font-size: 4.5vw;
+    }
+    .form_information {
+      width: 100%;
+      .form_angels {
+        padding: 1.5rem;
+      }
+    }
+    img {
+      width: 60%;
+    }
+  }
+
+
+  .testimonios img {
+    width: 15rem;
+  }
+
 }
